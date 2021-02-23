@@ -1,10 +1,14 @@
-import ExperienceBar from "../components/ExperienceBar";
-import { Container } from "../components/Container";
+import Home from "../templates/Home";
+import Head from "next/head";
 
-export default function Home() {
+export default function Index() {
   return (
-    <Container>
-      <ExperienceBar />
-    </Container>
+    <>
+      <Head>
+        <title>Home | Move.It</title>
+      </Head>
+
+      <Home />
+    </>
   );
 }
