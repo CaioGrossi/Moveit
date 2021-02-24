@@ -53,8 +53,26 @@ export const Button = styled.button`
 
     transition: background-color 0.2s;
 
-    &:hover {
+    &:not(:disabled):hover {
       background: ${theme.colors.blueDark};
+    }
+
+    &:disabled {
+      background: ${theme.colors.white};
+      color: ${theme.colors.title};
+      cursor: not-allowed;
+    }
+  `}
+`;
+
+export const ActiveButton = styled(Button)`
+  ${({ theme }) => css`
+    background: ${theme.colors.white};
+    color: ${theme.colors.title};
+
+    &:not(:disabled):hover {
+      background: ${theme.colors.red};
+      color: ${theme.colors.white};
     }
   `}
 `;
