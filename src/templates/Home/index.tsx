@@ -6,23 +6,26 @@ import Countdonw from "../../components/Countdonw";
 import ChallengeBox from "../../components/ChallengeBox";
 
 import * as S from "./styles";
+import CountdownProvider from "../../context/CountDownContext";
 
 export default function Home() {
   return (
     <Container>
       <ExperienceBar />
 
-      <S.MainSection>
-        <div>
-          <Profile />
-          <CompletedChallenges />
-          <Countdonw />
-        </div>
+      <CountdownProvider>
+        <S.MainSection>
+          <div>
+            <Profile />
+            <CompletedChallenges />
+            <Countdonw />
+          </div>
 
-        <div>
-          <ChallengeBox />
-        </div>
-      </S.MainSection>
+          <div>
+            <ChallengeBox />
+          </div>
+        </S.MainSection>
+      </CountdownProvider>
     </Container>
   );
 }
