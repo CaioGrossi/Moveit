@@ -1,6 +1,7 @@
 import Home, { HomeTemplateProps } from "../templates/Home";
 import Head from "next/head";
 import { GetServerSideProps } from "next";
+import { useChallengesContext } from "../context/ChallengesContext";
 
 export default function Index(props: HomeTemplateProps) {
   return (
@@ -8,7 +9,6 @@ export default function Index(props: HomeTemplateProps) {
       <Head>
         <title>Home | Move.It</title>
       </Head>
-
       <Home {...props} />
     </>
   );

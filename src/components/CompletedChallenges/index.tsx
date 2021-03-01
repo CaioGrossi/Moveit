@@ -1,8 +1,12 @@
 import { useChallengesContext } from "../../context/ChallengesContext";
 import * as S from "./styles";
 
-export default function CompletedChallenges() {
-  const { challengesCompleted } = useChallengesContext();
+type CompletedeChallengesProps = {
+  challengesCompleted: number;
+};
+export default function CompletedChallenges({
+  challengesCompleted,
+}: CompletedeChallengesProps) {
   return (
     <S.Wrapper>
       <span>Desafios completos</span>
