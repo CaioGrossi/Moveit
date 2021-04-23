@@ -25,4 +25,4 @@ para executar o projeto.
 
 ## Diferenciais
 * Utitlizado styled componentes para estilização
-* Mudança na estrutura do código para ficar mais genérico/organizado.
+* Mudança na estrutura do código para ficar mais genérico/organizado os componentes.
